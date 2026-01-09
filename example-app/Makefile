@@ -56,4 +56,4 @@ $(INT_DIR)/%.obj: %.cpp
 clean:
 	rm -rf $(BUILD_DIR)
 
-.PHONY: all build copy clean
+.PHONY: all clean
