@@ -15,7 +15,7 @@ RUN test -n "$XDK" || (echo "XEDK variable is not set." && false)
 # Header files
 COPY $XDK/include/xbox /xdk/include/xbox
 
-# Binaries
+# Always needed binaries
 COPY $XDK/bin/win32/cl.exe /xdk/bin/win32/
 COPY $XDK/bin/win32/1033/clui.dll /xdk/bin/win32/1033/
 COPY $XDK/bin/win32/mspdbXX.dll /xdk/bin/win32/
@@ -30,6 +30,11 @@ COPY $XDK/bin/win32/pgodb100.dll /xdk/bin/win32/
 COPY $XDK/bin/win32/link.exe /xdk/bin/win32/
 COPY $XDK/bin/win32/lib.exe /xdk/bin/win32/
 COPY $XDK/bin/win32/imagexex.exe /xdk/bin/win32/
+
+# Other binaries, not always needed
+# COPY $XDK/bin/win32/xbcp.exe /xdk/bin/win32/
+# COPY $XDK/bin/win32/xbdm.dll /xdk/bin/win32/
+# COPY $XDK/bin/win32/xbreboot.exe /xdk/bin/win32/
 
 # Always required libraries
 COPY $XDK/lib/xbox/libcMTd.lib /xdk/lib/xbox/
