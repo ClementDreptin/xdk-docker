@@ -12,7 +12,7 @@ Collection of Dockerfiles to build docker images containing the Xbox 360 Softwar
 
 ### Light
 
-Alpine image with `make` and `wine` containing a minimal set of files from the XDK to build applications and libraries. It is built with continuous integration (CI) in mind and focuses on being small.
+Ubuntu image with `make`, a minimal version of `wine` compiled from source and a minimal set of files from the XDK to build applications and libraries. It is built with continuous integration (CI) in mind and focuses on being small.
 
 This image might not contain everything you need to build your application or library. For example, if your application uses DirectX to render graphics and compiles HLSL shaders during a build step, you can add a `COPY` line to add the `fxc.exe` tool (and the potential DLLs it might depend on) and uncomment the `COPY` lines for `d3d9.lib`, `d3dx9.lib` and `xgraphics.lib`.
 
